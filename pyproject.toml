@@ -1,0 +1,22 @@
+[project]
+name = "fastdrift"
+version = "0.0.1"
+authors = [
+    { name = "Georgios Karakostas, email = <https://www.linkedin.com/in/geokarak>" },
+]
+dependencies = [
+    "evidently",
+    "fastapi",
+    "locust",
+    "loguru",
+    "pandas",
+    "pytest",
+    "scikit-learn",
+    "uvicorn[standard]",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff.lint]
+select = ["A", "B", "C", "E", "Q"]
