@@ -33,23 +33,19 @@ def save_to_database(request: Features, response: Response) -> None:
     conn = sqlite3.connect(RESOURCES_DIR / "predictions_store.db")
     cur = conn.cursor()
 
-    cur.execute(
-        """CREATE TABLE IF NOT EXISTS iris 
-        (creation_date TEXT, request TEXT, response TEXT)
-        """
-    )
+    with conn:
+        cur.execute(
+            """CREATE TABLE IF NOT EXISTS iris 
+            (creation_date TEXT, request TEXT, response TEXT)
+            """
+        )
 
-    current_time = datetime.datetime.now()
-    cur.execute(
-        "INSERT INTO iris VALUES (?, ?, ?)",
-        (
-            current_time,
-            request.json(),
-            response.json(),
-        ),
-    )
-
-    conn.commit()
-
-    cur.close()
-    conn.close()
+        current_time = datetime.datetime.now()
+        cur.execute(
+            "INSERT INTO iris VALUES (?, ?, ?)",
+            (
+                current_time,
+                request.json(),
+                response.json(),
+            ),
+        )
