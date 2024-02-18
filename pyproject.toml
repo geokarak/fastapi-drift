@@ -1,5 +1,5 @@
 [project]
-name = "fastdrift"
+name = "fastapi_drift"
 version = "0.0.1"
 authors = [
     { name = "Georgios Karakostas, email = <https://www.linkedin.com/in/geokarak>" },
@@ -8,11 +8,9 @@ dependencies = [
     "evidently",
     "fastapi",
     "locust",
-    "loguru",
     "pandas",
-    "pytest",
     "scikit-learn",
-    "uvicorn[standard]",
+    "uvicorn",
 ]
 
 [tool.setuptools.packages.find]
