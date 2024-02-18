@@ -3,7 +3,7 @@ import sqlite3
 from pathlib import Path
 
 import pandas as pd
-from fastdrift.schemas import Response
+from fastapi_drift.schemas import Response
 
 BASE_DIR = Path(__file__).resolve(strict=True).parents[2]
 RESOURCES_DIR = BASE_DIR / "resources"

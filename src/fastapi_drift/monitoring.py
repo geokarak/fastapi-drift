@@ -2,7 +2,7 @@ from pathlib import Path
 
 from evidently.metric_preset import DataDriftPreset
 from evidently.report import Report
-from fastdrift.loaders import PredDataLoader, load_train_data
+from fastapi_drift.loaders import PredDataLoader, load_train_data
 
 BASE_DIR = Path(__file__).resolve(strict=True).parents[2]
 STATIC_DIR = BASE_DIR / "static"

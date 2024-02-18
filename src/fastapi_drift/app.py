@@ -1,8 +1,8 @@
 from fastapi import BackgroundTasks, FastAPI
 from fastapi.responses import FileResponse
-from fastdrift.monitoring import get_data_drift_report
-from fastdrift.predict import get_prediction_for, save_to_database
-from fastdrift.schemas import Features, Response
+from fastapi_drift.monitoring import get_data_drift_report
+from fastapi_drift.predict import get_prediction_for, save_to_database
+from fastapi_drift.schemas import Features, Response
 
 app = FastAPI()
 

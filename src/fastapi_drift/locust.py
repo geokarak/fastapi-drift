@@ -1,6 +1,6 @@
 import random
 
-from fastdrift.schemas import Features
+from fastapi_drift.schemas import Features
 from locust import HttpUser, task
 
 

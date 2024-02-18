@@ -4,7 +4,7 @@ from pathlib import Path
 
 import joblib
 import numpy as np
-from fastdrift.schemas import Features, Response
+from fastapi_drift.schemas import Features, Response
 
 BASE_DIR = Path(__file__).resolve(strict=True).parents[2]
 RESOURCES_DIR = BASE_DIR / "resources"
